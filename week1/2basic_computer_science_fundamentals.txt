@@ -1,0 +1,23 @@
+C3 : Cloud Computing Concepts 
+
+I) Queue (Basic Datastructure)::::::::::::::::
+
+Es una estructura basado en  First-int First-out Datastructure
+
+Si se hace remove sobr el queue esta operacion se realiza sobre el head del cube 
+
+Los insert se realizan en la cola
+>Ambas operaciones se pueden realizar concurrentemente (a la vez) 
+
+
+
+II) Stack (Basic Datastructure)::::::::::::::::
+
+Es una estructura basado en  First-int Last-out Datastructure
+
+En espaniol es como apilamiento , en donde coloco un elemento y el segundo va encima de este (montonera ) y si los deseo eliminar empiezo por el de mas arriba , por ende le primero en entrar es el ultimo en salir.
+
+
+
+
+
