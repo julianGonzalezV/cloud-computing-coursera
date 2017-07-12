@@ -20,4 +20,65 @@ En espaniol es como apilamiento , en donde coloco un elemento y el segundo va en
 
 
 
+III) Cpm[puter architecture simplified
+
+est[a la CPU >> registers >> cache >> Memory >> Disk 
+
+Los registrer con como pequenios espacios de memoria sobre los cuales la CPU puede realizar algunas operciones , mientras que la cach[e si es mas grande en memoria, m[as rapida y ahorra procesos al procesador como tal, y permite que los datos que mas se usen esten casi que instant[aneamente
+
+
+
+IV) BiG O() Notation Notacion O grande :
+
+> Describe el limite superior del comportamiento de algoritmos dado el incremento de algunas de  variables hacia el infinito
+> El an[alisis se realizar en runtime la mayor[ia de las veces
+
+> La forma mas facil de analisis de algoritmos
+
+> Lo mejor es que obtiene el performance del peor caso dado. eso nos da la idea que la complejidad del algoritmo.
+
+Ex1 :
+
+Buscar un elementos sobre una lista desordenada es O(N) , donde N es el tamnio de la lista
+
+El peor caso (en cuestion de performance) ser[ia que el elento que estamos buscando sea el ultimo o que no exista, esto tomaria  
+
+:Multiplicando probabilidades
+Siendo E1 y E2 dos eventos independientes uno del otro entonces la probabilidad de que pase E1 y E2 a la vez  =  Prob(E1) * Prob(E2)
+
+Eje la probabilidad de levantarse a las 10 am y esciger un buso dentro de3 colores posible es = 1/24 * 1/3 = 1/72  (24 debido a que el dia tiene 24 horas)
+
+OJO SI E2 DEPENDIERA DE E1 ENTONCES NO SE PODR]IA APLICAR LA FORMULA ANTEROIR DE MULTIPLICA CADA PROBABILIDAD
+
+:sUMANDO probabilidades
+
+sIENDO e1 Y e2 DOS EVENTOS entonces Prob(E1 Or E1)  = prob(E1) +  prob(E1)  - Prob(E1 and E1)  
+
+o sino conocemos que Prob(E1 and E1)  entonces :
+Prob(E1 Or E1)  <= prob(E1) +  prob(E1)
+
+
+
+:::::::::::::::;DNS::::::::::::::::::::::::::
+DNS : Domain Name Service 
+Coleccion de servidores alrededor del mundo
+Una entrada DNS ser]oa el nombre de un sitio como google.com
+Domain Name es un nombre que lo entiende todo el mundo 
+
+
+:::::;DNS2
+Salida DNS : Una IP o ID que apunta a un objeto y no es muy entendible (como el dominio google)para los usaurios
+
+Una IP address puede referirse a:
+
+Web server alojanddo algun contednido 
+
+O Un host indirecto como un CDN server (Content Distribution Network) 
+
+
+VII) Graphs 
+
+
+
+
 

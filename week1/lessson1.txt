@@ -1,0 +1,53 @@
+WHY CLOUDS?
+
+Many cloud providers like 
+
+AWS: Amazon Web Services, y provee servicios de los cuales los pricipales 3 son:
+
+	EC2: Elastic Compute Cloud , que provee los servicios de computo
+	S3: Simple Storage Service , que brinda la posibilidad de Almacenar Datos y que pueden ser accedidos desde cualquier lugar do mundo :) 
+	EBS: Elastic Block Storage, que es el volumen de almacenamiento al que instancias EC2 pueden acceder mientras est[an corriendo 
+
+
+
+Two Categories of Cloud:
+
+Private Clouds : Son accedidas solo por personal de la empresa que tenga dichos provilegios
+Ofrecen el servicio de vender la nube y quien la compre la debe administrar.
+
+Public Clouds: Puede ser accedida por cualquiera desde cualquier lugar Do mUndo , por lo cual estos pagan v[ia credit card si lo desean 
+	Amazon S3 , almacena todo tipo de DataSets , y se debe pagar por GB 
+	Amazon EC2 , se paga por CPU hours used , eje si estuve 1H usando 5VM al mismo tiempo, entonces deber[e pagar por 5 CPUS HOUR 
+
+
+Customers Save Time And $$
+
+Esto atrae mucho a los clientes debido a que 
+
+Time:
+Imaginemos que necsitamos un server y se demora x semanas en llegar, configurar en sitio , mientras que con Cloud solo es agregar el nuevo server 	EN 3 MINUTOS !!! AHORRA TIEMPO Y DINERO
+
+
+
+WHAT IS A CLOUD ??
+
+Cloud = lots of storage(GB, TB , PB) + COMPUTE CYCLES NEARBY
+
+es la definicion anterior y no al contrario porque no se hace que la informaci[on este lo mas cerca a nustros computadores sino que los computadores deben traerser cerca a los datos 
+
+2 Clases de CLoud
+> Single-Site Cloud  (mas conocido como Data Centers)
+
+
+> A geographically Distribution : varios Data Centers Distribuidos 
+
+
+
+
+
+History:
+
+
+
+
+
