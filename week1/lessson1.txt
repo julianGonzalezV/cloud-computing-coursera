@@ -47,6 +47,25 @@ es la definicion anterior y no al contrario porque no se hace que la informaci[o
 
 History:
 
+see slides 
+
+
+
+
+
+slides #5
+III. Data-intensive Computing Example areas: MPI-based, high-
+performance computing, grid  
+MPI: Message passing Interface 
+
+Data-Intensive:
+	>Large amount of data stored.
+	>Y necesatamos hacer uso de nodos de calculo que se encuentran cera ca los datos(por eso la formua de arrina de que es cloud Cloud = lots of storage(GB, TB , PB) + COMPUTE CYCLES NEARBY)
+	debido a que estamos trantando enormes cantidades de datos. TB, PT o HexaBytes
+
+
+
+
 
 
 
