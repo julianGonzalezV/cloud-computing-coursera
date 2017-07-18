@@ -12,12 +12,12 @@ AWS: Amazon Web Services, y provee servicios de los cuales los pricipales 3 son:
 
 Two Categories of Cloud:
 
-Private Clouds : Son accedidas solo por personal de la empresa que tenga dichos provilegios
-Ofrecen el servicio de vender la nube y quien la compre la debe administrar.
+Private Clouds : Son accedidas solo por personal de la empresa que tenga dichos privilegios
+Ofrecen el servicio de vender el serviocio de la nube y quien la compre la debe administrar.
 
 Public Clouds: Puede ser accedida por cualquiera desde cualquier lugar Do mUndo , por lo cual estos pagan v[ia credit card si lo desean 
 	Amazon S3 , almacena todo tipo de DataSets , y se debe pagar por GB 
-	Amazon EC2 , se paga por CPU hours used , eje si estuve 1H usando 5VM al mismo tiempo, entonces deber[e pagar por 5 CPUS HOUR 
+	Amazon EC2 , se paga por CPU hours used , eje si estuve 1H usando 5VM al mismo tiempo, entonces deber[ia pagar por 5 CPUS HOUR 
 
 
 Customers Save Time And $$
@@ -25,7 +25,7 @@ Customers Save Time And $$
 Esto atrae mucho a los clientes debido a que 
 
 Time:
-Imaginemos que necsitamos un server y se demora x semanas en llegar, configurar en sitio , mientras que con Cloud solo es agregar el nuevo server 	EN 3 MINUTOS !!! AHORRA TIEMPO Y DINERO
+Imaginemos que necesitamos un server y se demora x semanas en llegar, configurar en sitio , mientras que con Cloud solo es agregar el nuevo server 	EN 3 MINUTOS !!! AHORRA TIEMPO Y DINERO
 
 
 
@@ -33,7 +33,7 @@ WHAT IS A CLOUD ??
 
 Cloud = lots of storage(GB, TB , PB) + COMPUTE CYCLES NEARBY
 
-es la definicion anterior y no al contrario porque no se hace que la informaci[on este lo mas cerca a nustros computadores sino que los computadores deben traerser cerca a los datos 
+es la definicion anterior y no al contrario porque no se hace que la informaci[on este lo mas cerca a nustros computadores sino que los computadores deben traersen cerca a los datos 
 
 2 Clases de CLoud
 > Single-Site Cloud  (mas conocido como Data Centers)
