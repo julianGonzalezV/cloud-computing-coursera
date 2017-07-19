@@ -1,0 +1,15 @@
+
+
+CUAL ES LA RELACION ESNTRE CLUD SYSTEM  Y UN DISTRIBUTE SYSTEM? R/ eso lo iremos respondiendo pero de entrada La nube es un sistema distribuido.
+
+
+
+peer to peer d: Red en donde los nodos actuan como cleinetes y servidores 
+
+
+
+Se considera que CLund es el mas nuevo Apodo para Distributed Systems, ha ido cambiando porque antes le llemaban clusters, p2p , timeshare computers and grids
+
+todos los conceptos siendo aplicado a su epoca y objteto de estudio, sin embargo lo escencial el core de Distributed System es el MISMO!!44
+
+Ejemplo Lamport timestamps is a simple algorithm used to determine the order of events in a distributed computer system. Y AUN SE SIGUE APLICANDO  Lamport timestamps  A LA NUBE.44
