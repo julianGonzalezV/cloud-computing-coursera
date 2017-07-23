@@ -1,1 +1,96 @@
-/home/jag/Downloads/_27726e67e708ecabe522c68b243198d4_C3_Mapreduce_A_CSRAfinal.pdf
+
+
+
+::::::::::::::::::;mapReduce Paradimg:::::::::::::::::
+
+
+ejemplo de mapReduce: Supongamos que se desea obtener la suma de los cuadrados de una lista de enteros
+
+1) Palicamos el map
+(map square (1 2 3 4)) 
+; ( 1 4 9 16 ) procesa cada registro o cada elemento secuencialmente PERO DE MANERA INDEPENDIENTE, es decir que el square de 2 se puede calcular independientemente del square de 3 , npara squre de 3 no se requiere de la salida de square de 2.
+
+2) Luego aplicariamos el reduce
+(reduce + (1 4 9 16))
+; 30 , procesa los registros en batches o grupos de elementos , puede que en un mismo grupo queden todos los elementos o que se generar subgrupos de todos los elementos en total 
+
+
+SER[A QUE ADELANTANDONOS PODRIAMOS PENSAR QUE EL MAP HACE QUE SE EJECUTEN LOS COMPUTOS INTEPENDIENTES EN CADA NODO Y EL REDUCE VA POR TODOS ESOS RESULTADOS Y GENERA LA RSPUESTA???
+Al completar el curso o semana ver si es o no esto :) 
+
+
+
+
+
+Otro Ejemplo:
+Que tal s[i nos pidieran que dado un texto y una palabra , busquemos las veces en que dicha palabra se encuentra en el texto  , ejemplo del como lo hariamos aplicando mapReduce:
+
+Pensar en el caso en que nos pasen un texto demasiado enorme....
+
+1) Aplicando Map: (que por casualidad genera un map pero no siempre es as[i)
+
+	Procesando registros individuales para generar una estructura  Key value, en este caso cada registro ser[ia un word 
+
+
+ejemplo dado: un archivo con 2 l[ineas en donde sus valores ser[an los siguientes
+Welcome everyone 
+hello everyone 
+
+el resultado ser[ia {Welcome 1 , everyone 1, hello 1, everyone 1 }  (el segundo everyone 1 lo que se hace es que a cada word se le da un peso de 1 que es cuando fu[e encontrado en el texto)
+
+iMAGINEMOS que las l[ineas 1 y 2 del archivo contiene textos enormes o que el archivo tiene demasiadas l[ineas ;
+	> Se puede paralelizar por l[ineas o conjunto de l[ineas para que sea m[as eficiente el proceso y al final que entreguen el Map Key - value que se requiere, ya que son procesos indepentientes y el que se genere el map de la l[inea 1 no es necesario para que se genere la 1 se puede hacer independientemente.
+
+2) Aplicando reduce:::::::
+>Hasta ahora hemos visto que solo se genera un Map y los keys repetidos tienen el valor de 1, por lo cual entra a jugar el reduce , en donde la salida es otro Map , en donde acumula los values de los keys repetidos durante la FASE MAP paso 1.
+
+el resultado ser[ia algo asi como:
+{Welcome 1 , everyone 2, hello 1 }, en este los values ya ser[ian los conteos 
+
+Y como paralelizar el reduce fase para [este ejemplo??
+
+Asignando keys a los reducer por lo cual un key puede ser everyone entonces ese reduce solo ir[a por ese key en el map del paso 1 
+
+En el video me enrredo porque quedan 2 reducer  en paraleo pero no deber[ian ser 3? por lo que al crear los reduces me dan 3 diferentes
+
+
+OTRA FORMA es aplicar hash partitioning:::::::::::
+que consiste en:
+
+1 Se toma el key
+
+2 Se le aplica hashing con una funci[on hash. un algoritmo simple ono to one o Message o MD Five, o cualquiera , siempre y cuando sea consistente, es decir que la misma se aplica a todos los Keys
+
+3 Se toma el numero de los Reducers (reduce servers ) en este caso el nuemero de cada tarea tipo Reduce.
+
+
+Cual es la principal diferencia entre MAPs y REDUCERs?
+
+Map procesa Keys de manera independiente mientras Reducers van pro conjuntos que se relacionan con el mismo key.
+
+MapReduce comes from Google, ellos no lo dejaron como opensource pero su dejaron un paper con la explicaci[on acerca de [este ; luego ingenierso de yahoo lo tomaron e implementaron su propio que  se convirti[o en Apache hadoop y es Opensource.
+
+
+Ver en el video 3.1 minuto 11:37 reduce paradigm la implementaci[on de MAP para el ejemplo anterior , que devolveria un mam con Key =  la palabara que se est[a procesando ; value =1 
+
+Igual en el minuto 11:37 est[a la implementaci[on del reduce julian anfres gonzalez
+
+Tambien est[a la implementacion del driver co c[odigo que ejecutar[a las dos fases Map and Reduce
+	recibe un archivo de Outut y otro de Input, es algo que maneja Hadoop.
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::VIDEO 3.2 MAP REDUCE EXAPMPLE:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Ejemplos de algunas aplicaciones que lo usan y lo potente que puede llegar a ser:
+
+1) Distributed Grep 
+
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+
+

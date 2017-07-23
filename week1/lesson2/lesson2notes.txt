@@ -4,15 +4,15 @@ CUAL ES LA RELACION ENTRE CLouD SYSTEM  Y UN DISTRIBUTED SYSTEM? R/ eso lo iremo
 
 
 
-peer to peer d: Red en donde los nodos actuan como cleinetes y servidores 
+peer to peer d: Red en donde los nodos actuan como clientes y servidores 
 
 
 
 Se considera que CLoud es el mas nuevo Apodo para Distributed Systems, ha ido cambiando porque antes le llemaban clusters, p2p , timeshare computers and grids
 
-todos los conceptos siendo aplicado a su epoca y objteto de estudio, sin embargo lo escencial el core de Distributed System es el MISMO!!44
+todos los conceptos siendo aplicados a su epoca y objteto de la era, sin embargo lo escencial es que el core de Distributed System se mantiene , es el mismo,
 
-Ejemplo Lamport timestamps is a simple algorithm used to determine the order of events in a distributed computer system. Y AUN SE SIGUE APLICANDO  Lamport timestamps  A LA NUBE.44
+Ejemplo Lamport timestamps is a simple algorithm used to determine the order of events in a distributed computer system. Y AUN SE SIGUE APLICANDO  Lamport timestamps  A LA NUBE.
 
 
 
@@ -23,12 +23,12 @@ S[i usamos un PC , smartphone, todos estos corren sobre un OS
 Android : IOS; Windows, Linux; MAC
 
 > Provee interfaces de HW(dispositivos que serviran de puente para que el usuario pueda manipular )
-	Por lo anterior podemos decir que son piezas de codigo para cada dispositivo en espacial (keyboard, mouse, screen touch), lo que conocemos como drivers (chunks of code)
+	Por lo anterior podemos decir que provee piezas de codigo para cada dispositivo en especial (keyboard, mouse, screen touch), lo que conocemos como drivers no son mas que chunks of code.
 
-> Provide Abstractions: Abstraccione brindadas por el OS para que S[olo nos preocupemos por archvivos o carpetas en especifico, donde quedan instalado el driver etc y/o procesos(pro el visualizador de procesos, comando etc) ejecutandosen y no el como funcionan internamente, o como se almacenan en el Disco duro , en que lugar de la CPU corre.
+> Provide Abstractions: Abstraccione brindadas por el OS para que S[olo nos preocupemos por archvivos o carpetas en especifico, donde quedan instalado el driver etc y/o visualizar los procesos(por el visualizador de procesos, comando etc) ejecutandosen y no el como funcionan internamente, o como se almacenan en el Disco duro , en que lugar de la CPU corren.
 
 
-> Resource Manager (Scheduler): Responsabe de cuando un programa se ejecuta y en donde, que fileSystem acceder cuando est[e corriendo 
+> Resource Manager (Scheduler): Responsabe de gestionar el cuando(en que momento) un programa se ejecuta y en donde, que fileSystem acceder cuando est[e corriendo.
 
 
 
@@ -48,7 +48,7 @@ Obvio Internet: Donde existen clientes, servidores, routers y dem[as comnunicand
 The Web: Donde hay clientes y servidores
 
 
-HADOOP: Es distribuido porque ser cluster y tener una arquitectura Marter/slave , mas informaci[on en o sitio oficial http://www.happyminds.es/tutorial-de-apache-hadoop/#sthash.tQq0GoYU.MnwSI36n.dpbs
+HADOOP: Es distribuido por ser cluster y tener una arquitectura Marter/slave , mas informaci[on en o sitio oficial http://www.happyminds.es/tutorial-de-apache-hadoop/#sthash.tQq0GoYU.MnwSI36n.dpbs
 Hadoop es un sistema de código abierto que se utiliza para almacenar, procesar y analizar grandes volúmenes de datos; cientos de terabytes, petabytes o incluso más. 
 
 Hadoop es capaz de almacenar toda clase de datos: estructurados, no estructurados, semiestructurados; archivos de registro, imágenes, video, audio, comunicación, etc
@@ -56,7 +56,7 @@ Hadoop es capaz de almacenar toda clase de datos: estructurados, no estructurado
 Por otra parte Hadoop también destaca por tener una arquitectura con capacidad de asegurar una alta disponibilidad y recuperación de los datos que ingesta.
 
 
-Data Centers: Multiple servidores agrupados en lugares y zonas estrategicas eje google , amazon tienen miles o millones de servidores , eso es lo que permite que haya 
+Data Centers: Multiple servidores agrupados en lugares y zonas estrategicas eje google , amazon tienen miles o millones de servidores licalizados en varios DATA CENTERS, eso es lo que permite que haya 
 disponibilidad de mis sitios, web apps , servicios en la nube etc
 
 
@@ -65,7 +65,7 @@ disponibilidad de mis sitios, web apps , servicios en la nube etc
 
 ::::::::::::CUALES NO  SON  sistemas Distribuidos::::::::::
 
-hUMANOS comunicandose entre si 
+hUMANOS comunicandose entre si (parecen pero no lo son por no poderse modificar , Sys Dist  si se puede modificar)
 Un standalone server sin conexi[on a interne y ejecutando un solo proceso
 
 
@@ -93,7 +93,7 @@ Definiciones de Otras fuentes: Ver video
 
 Los procesos son una 	entidad IMPORTANTE dentro de un sistema distribuido
 
-Podemos pensar en DSystems como multiples procesos comunicandosen entri v[a mensajes 
+Podemos pensar en DSystems como multiples procesos comunicandosen entre si v[ia mensajes.
 
  
 
