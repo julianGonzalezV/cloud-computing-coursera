@@ -83,10 +83,32 @@ Tambien est[a la implementacion del driver co c[odigo que ejecutar[a las dos fas
 
 Ejemplos de algunas aplicaciones que lo usan y lo potente que puede llegar a ser:
 
-1) Distributed Grep 
+1) Distributed Grep  (comamdo linux)
+Input : gran cantidad de archivos 
+Output: Lineas que coinciden con el patron
+
+Map: para emitir las lineas que complen 
+Reduce:  para copiar la salida
+> En esta aplicacion por ejemplo se puede tener Map Task paralelizados y hasta el reduce porque no depende de alguna línea en específico.
 
 
+2) Reverse Web link Graph
+ Input : Tuplas (a, b) donde  (page a -> page b ), la pagina a (origen)se relaciona o tiene un link a la pg b (destino)
+ Output : Por cada pagina se debe olbtener las listas de paginas con las que se relaciona (tiene un link)
 
+ Map : por cada par <source, target>, entonces devuelve el listado <target , source> 
+		Por que invierte los keys? R/ Diría que es debido a que es la entrada ideal para aplicar el reduce
+		
+ Reduce: Recie la salida del proceso Map (invertir Keys) y los relaciona por grupos
+ 
+ Se podría crear una extensión de este ejemplo para que diga cuantas páginas apuntan el mismo destino, con esto solo sería que la fase Map retorne por cada key
+ <target , 1> y en la fase Reduce se sumarían.
+ 
+ Quedo en Min 4:15
+ 
+3)
+ 
+ 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
