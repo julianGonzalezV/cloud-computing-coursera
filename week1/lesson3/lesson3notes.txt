@@ -106,12 +106,112 @@ Reduce:  para copiar la salida
  
  Quedo en Min 4:15
  
-3)
+3) Conteo de urls accedidas de manera frecuente 
  
- 
+ Input  : Logs de Urls accedidas, puede ser desde el proxy server
+ Output:  Porcentaje de accesos por cada URL del log
+
+Map: para agarrar cada url y darlo un peso eje <url, 1>
+
+Reduce: se agrupa por cada url y la suma de los conteos, hasta ac]a nada  diferente. peeero ... se necesita es el porcentaje y tend]ia que ser dividido por la cantidad total de Url distintas 
+....por lo anterior se requiere OTRA FASE DE MAP REDUCE.
+
+Map2 : para retornar <1, (url, count)>...<1, (url_n, count_n)>, para que en la fase de reduce se sumen esos 1nos
+
+Reduce 2 : <url, count/over_all_count>, el reducer2  har[ia el pason para calcula el porcentaje.
+
+
+este es un ejemplo de como encadenar Map reducers
+
+
+
+
+
+NOTA: 
+Map fase output es una resultado ordenado (eg quicsort)
+
+Reduce fase output es una resultado ordenado (eg mergeSort)
+
+4) SORT algorithm
+
+Input: serie de (key, value) pairs
+
+Output: sorted VALUEs.
+
+
+
+Map : <key, value> => <value,_> (_ es la identidad)
+
+Reduce: <key, value> => <key, value> , esto significa que el reduce no hace nada sino que retorna el mismo map  <key, value> PORQUE LA FASE DEL MAP YA LO HIZO, ADEM]AS EN ESTA FASE
+POR DEFECTO VUELTE Y ORDENA MERGE
+
+ CUALES SON LAS VENTAJAS DE QUE LAS FASES MAP AN REDUCE ORDENEN SUS SALIDAS?
+
+> hACER SORT resulta mucho mas f[acil 
+> Un Map puede saber que continuo set de datos puden ser enviados a que espefico Reduce 
+> Reduce puede llamar la funcion de reducci[on sobre un contiguo ser de datos 
+
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+
+
+:::::::::::::::::::::::::::::::::::::::::VIDEO 3.3 MapReduce Scheduling:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Programando Map Reduce:
+Externamente:
+programar el Map, el reduce : enviarle el trabajo a realizar y esperar una respuesta (lo anterior es muy abstracto porque no se requiere saber como paralelizar Maps and Reducers)
+
+
+Internamate: Si se debe preocupar de como paralelizar, que primero se ejecuten los Maps y luego los reducers.
+
+
+
+
+FOR THE CLOUD:
+
+1 Paralelizando un Map 
+	> Recordar que cada task on Map es independiente.
+		Asegurarnos que los outputs de los Maps que contengan el mismo Key sea pasado a un mismo Reduce
+2 Transfer data from Map to the Reduce 
+		Usar una funcion de particionamiento, por ejemplo hash(key) % cantidad de reducers
+
+
+3 Paralelizando un Reduce:
+	> Tambien son tareas independientes, ya que a cada reducer se le asigna un set de keys y no se espera a que un set de keys sea procesado.
+	>  Los reducer no se sobrelapan entre si.
+
+
+Por lo anterior, schedulizar Map and reduce no deber[ia ser complicado en cuanto un Map no se habla son otro Map y un Reducer no se habla con el otro.
+
+
+4 Implement Storage for input and output Map : Input and output Reducers
+
+
+ 
+::::::::::::::THE YARN SCHEDULER (yet another resource Negociator)
+
+eS Un nuevo scheduler que est[a siendo usado en Apache Hadoop 
+
+Containers son algo de CPU + memoria
+
+Cada Server es una colecci[on de contenedores 
+
+Por lo anterior si un pc tiene 4 cores y 4GB de RAM  entonces EN UN SOLO CONTAINER habr[a 1 core y  1GB de RAM, Por lo cual ese servidor tendr[a 4 contenedores , en donde se podr[an ejecutar
+a lo sumo 4 tareas al mismo tiempo en cada contenedor
+
+
+YARN tIENE 3 COMPONENTES principales:
+
+1 Global Resource Manager (RM): Hay un solo  Global Resource Manager, quien es el que inicia el scheduler
+
+2 Per-server Node Manager (NM): 1 NM por servidor, ese el deamon encargado de ese servidor en especifico y encargado del monitoreo de fallos de tareas ejecutadas en ese servidor.
+
+3 Per application job  Application Master (AM): 1 AM por servidor y es el encargado de negociar CONTENEDORES  con el RM y NM , SI hay tareas ejecutandosen all[i , si se est[an o no ejecutando 
+
+
+EL APPLICATIO NMASTER ES EL ENCARGADO DE UN JOB A LA VEZ
 
 
 
