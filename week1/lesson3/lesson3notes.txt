@@ -211,8 +211,67 @@ YARN tIENE 3 COMPONENTES principales:
 3 Per application job  Application Master (AM): 1 AM por servidor y es el encargado de negociar CONTENEDORES  con el RM y NM , SI hay tareas ejecutandosen all[i , si se est[an o no ejecutando 
 
 
-EL APPLICATIO NMASTER ES EL ENCARGADO DE UN JOB A LA VEZ
+EL Application Master (AM) ES EL ENCARGADO DE UN JOB A LA VEZ
+
+
+:::::::::::::::::::::::::::::::::::::::::VIDEO 3.4 Fault Tolerance:::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Server Failures : Este es el m[as com[un , y afecta el resto de componentes YAR (ver arriba), el server corre dichos compoenentes por cada Job
+Para el tratamieto de Falllas del lado del servidor existen los Hearbeats (en este caso seniales que se emiten a otros compoenentes Yarn )
+ >El NM(uno por cada servidor) env[ia estas seniales periodicamente al RM , por lo anterior si el servidor falla la senial se deja de emitir y el RM se da cuenta que el server dej[o de funcionar
+ >EL RM notifica al AM del fallo y este actua tomando una accion al respecto
+ >De igual forma si el AM falla para los heartbeats hacia el RM y el RM se da cuenta del fallo y lo que hace es reiniciar el AM para que retome sus tareas. Lo anterior puede ser complicado , dependiendo de la cantidad de tareas que se encontraba ejecutando. 
+
+Ven alguna dependencia?? ..si es RM ..
+
+Global Resource Manager (RM) failures: No hay forma de detectar los fallos de los RM, pero una forma de tratar con esto es tener un BACKUP  del RM , el cual  ser[ia el encargado ( de manera inmediata) una vez el RM falla.
 
 
 
+::::::;straggler (Slow servers or nodes):
+> The slowest machine slow the entire job down : IF el proceso map o Reduce que se est[e corriendo en dicha m[aquina esta lento entonces, si espor el lado del Map toda la operacipon Reduce No 
+puede iniciar y si es por el lado del Reduce la ejecuci[on del job en general se para hasta que no se ejecute hasta el ultimo Reducer
+
+> Que los hace lentos?  , Un disco daniado , la red lenta , cpu, memoria 
+
+Como se trata este problema?
+Teniendo una traza del progreso de las tareas y el AM toma la decicion de hacer , Ejemplo:
+
+Para un Job  tenemos 3 tareas ejecutandosen y una de ellas est[a en 10% y nada que avanza, por lo cual el AM genera una replica de dicha tarea en otro servidor (ejecutando el bk de esta) y la primera que 
+termine es la que se toma como Ejecutada y el ultimo se Elimina (kill) y la tareas se ,arcar[a como completa. esto se conoce como Speculated Execution DEBERIA LLAMARSE REPLICATED EXECUTION ya que no se 
+esta especulando nada.
+
+
+
+::::::;Locality 
+
+Una Nube por lo general tiene una topolog[ia Jer[arquica ejemplo RACKS
+GFS/HDFS almacenan 3 replicas en el rack deseado por ejemplo 2 replicas en uno y la restante en otro. Lo anterior por si uno de los Racks falla entonces se puede reprogramar las tareas en otro que ya
+contiene la replica, O EN:
+
+ eN EL SIGUIENTE ORDEN:
+
+1) En otro que contenga la replica (PREFERIBLEMENTE)
+
+2) Que MapReduce intente programar una tarea en el mismo rack que fall[o 
+
+3) en cualquier lugar
+
+ 
+Hadoop Distributed File System (HDFS) is an Apache project. It's a file system which is used to store the initial and 'reduced' data once the data is processed using MapReduce. Google File System (GFS) was the database created by Google initially to store the website indexing data for the search engine. 
+HDFS is based on GFS.
+
+
+
+
+Entrevista a Sumeet Singh:
+
+
+Mucho enfasis en que los siguientes anios ser[an muy importantes respecto a Cloud computing, Cloud computing abre paso a Nuevas y mejoradas experiencias de usuario 
+disponibilidad , repidez , Incluso hablaba de 
+
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
