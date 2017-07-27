@@ -1,0 +1,27 @@
+
+
+Multicast Problem
+
+Multicast: a set of data sent across a computer network to many users at the same time.
+
+OJO MULTICAST ES OPUESTO A BROADCAST, ya que broadcast se refiere a enviar un mensaje a todos al mismo tiempo , multicast SOLO DESEA QUE LE LLEGUEN A ALGUNOS
+
+::::::::::::::::::::;GOSSIP ::::::::::::::::::::::::::::::; IS A SORT OF PROTOCOL::::::::::::::
+
+El problema que Gossip trata de resolver es el de Multicast Problem
+
+De que se trata el problema:
+Grupo de procesos o nodos , en donde el proceso est[a en algun host en internet o conectado a una red
+
+> Un nodo tiene una informaci[on valiosa para los dem[as(del grupo selecto) 
+> Los dem[as nodos tambien pueden tener informacion necesaria y la desean enviar tambien
+
+
+Requerimientos del Multicast protocol :
+
+Tolerante a fallos:  Bloquedo de nodos, packetes eliminados , miles de mensajes emitiendosen/recibiendo
+
+Escalabilidad: 
+
+
+IP multicast es implementado en routers y 
