@@ -13,11 +13,11 @@ AWS: Amazon Web Services, y provee servicios de los cuales los pricipales 3 son:
 Two Categories of Cloud:
 
 Private Clouds : Son accedidas solo por personal de la empresa que tenga dichos privilegios
-Ofrecen el servicio de vender el serviocio de la nube y quien la compre la debe administrar.
+Ofrecen el servicio de vender el servicio de la nube y quien la compre la debe administrar.
 
 Public Clouds: Puede ser accedida por cualquiera desde cualquier lugar Do mUndo , por lo cual estos pagan v[ia credit card si lo desean 
 	Amazon S3 , almacena todo tipo de DataSets , y se debe pagar por GB 
-	Amazon EC2 , se paga por CPU hours used , eje si estuve 1H usando 5VM al mismo tiempo, entonces deber[ia pagar por 5 CPUS HOUR 
+	Amazon EC2 , se paga por CPU hours used , eje si estuve 1H usando 5 Virtual Machines al mismo tiempo, entonces deber[ia pagar por 5 CPUS HOUR 
 
 
 Customers Save Time And $$
@@ -33,7 +33,7 @@ WHAT IS A CLOUD ??
 
 Cloud = lots of storage(GB, TB , PB) + COMPUTE CYCLES NEARBY
 
-es la definicion anterior y no al contrario porque no se hace que la informaci[on este lo mas cerca a nustros computadores sino que los computadores deben traersen cerca a los datos 
+es la definicion anterior y no al contrario porque no se hace que la informaci[on este lo mas cerca a nuestros computadores sino que los computadores deben traersen cerca a los datos 
 
 2 Clases de CLoud
 > Single-Site Cloud  (mas conocido como Data Centers)
@@ -60,8 +60,8 @@ MPI: Message passing Interface
 
 Data-Intensive:
 	>Large amount of data stored.
-	>Y necesitamos hacer uso de nodos de calculo que se encuentran cerca a los datos(por eso la forma de arrina de que es cloud Cloud = lots of storage(GB, TB , PB) + COMPUTE CYCLES NEARBY)
-	debido a que estamos trantando enormes cantidades de datos. TB, PT o HexaBytes
+	>Y necesitamos hacer uso de nodos de calculo que se encuentren cerca a los datos(por eso la forma de arriba de que es cloud Cloud = lots of storage(GB, TB , PB) + COMPUTE CYCLES NEARBY)
+	debido a que estamos trantando con enormes cantidades de datos. TB, PT o HexaBytes
 
 
 
