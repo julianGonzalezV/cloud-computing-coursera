@@ -6,13 +6,13 @@
 
 ejemplo de mapReduce: Supongamos que se desea obtener la suma de los cuadrados de una lista de enteros
 
-1) Palicamos el map
+1) aplicamos el map
 (map square (1 2 3 4)) 
 ; ( 1 4 9 16 ) procesa cada registro o cada elemento secuencialmente PERO DE MANERA INDEPENDIENTE, es decir que el square de 2 se puede calcular independientemente del square de 3 , npara squre de 3 no se requiere de la salida de square de 2.
 
 2) Luego aplicariamos el reduce
 (reduce + (1 4 9 16))
-; 30 , procesa los registros en batches o grupos de elementos , puede que en un mismo grupo queden todos los elementos o que se generar subgrupos de todos los elementos en total 
+; 30 , procesa los registros en batches o grupos de elementos , puede que en un mismo grupo queden todos los elementos o que se generen varios subgrupos de todos los elementos en total 
 
 
 SER[A QUE ADELANTANDONOS PODRIAMOS PENSAR QUE EL MAP HACE QUE SE EJECUTEN LOS COMPUTOS INTEPENDIENTES EN CADA NODO Y EL REDUCE VA POR TODOS ESOS RESULTADOS Y GENERA LA RSPUESTA???

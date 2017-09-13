@@ -8,12 +8,11 @@ peer to peer d: Red en donde los nodos actuan como clientes y servidores
 
 
 
-Se considera que CLoud es el mas nuevo Apodo para Distributed Systems, ha ido cambiando porque antes le llemaban clusters, p2p , timeshare computers and grids
+Se considera que CLoud es el mas nuevo Apodo para Distributed Systems, ha ido cambiando porque antes le llamaban clusters, p2p , timeshare computers and grids
 
-todos los conceptos siendo aplicados a su epoca y objteto de la era, sin embargo lo escencial es que el core de Distributed System se mantiene , es el mismo,
+todos los conceptos siendo aplicados a su epoca y objeto(finalidad) de la era, sin embargo lo esencial es que el core de Distributed System se mantiene , es el mismo,
 
 Ejemplo Lamport timestamps is a simple algorithm used to determine the order of events in a distributed computer system. Y AUN SE SIGUE APLICANDO  Lamport timestamps  A LA NUBE.
-
 
 
 
@@ -43,7 +42,7 @@ NFS : Network File System : un cliente se comunica un solo servidor
 
 Bitorrent: Basado en P2P que consiste en millones de clientes comunicandose entre si 
 
-Obvio Internet: Donde existen clientes, servidores, routers y dem[as comnunicandose entre se
+Obvio Internet: Donde existen clientes, servidores, routers y dem[as comnunicandose entre si
 
 The Web: Donde hay clientes y servidores
 
@@ -66,7 +65,7 @@ disponibilidad de mis sitios, web apps , servicios en la nube etc
 ::::::::::::CUALES NO  SON  sistemas Distribuidos::::::::::
 
 hUMANOS comunicandose entre si (parecen pero no lo son por no poderse modificar , Sys Dist  si se puede modificar)
-Un standalone server sin conexi[on a interne y ejecutando un solo proceso
+Un standalone server sin conexi[on a internet y ejecutando un solo proceso
 
 
 
@@ -80,12 +79,12 @@ Los sistemas distribuidos por lo general usan algun tipo de qreuitectura cliente
 
  El teacher indica que la definici[on NO ES CORRECTA, AC[A ALGUNOS DE LOS MOTIVOS:
 
-1: En la definicion "cuya distribucion es transparente a los usuario y parece como si fuera una sola m[aquina", si fuera cierto entonce la Web no fuera un sistema distribuido
+1: En la definicion "cuya distribucion es transparente a los usuario y parece como si fuera una sola m[aquina", si fuera cierto entonces la Web no fuera un sistema distribuido.
 
 2: En la definici[on "Los sistemas distribuidos por lo general usan algun tipo de qreuitectura cliente-servidor ": Pero tenemos a biTorrent que ES UN SISTEMA DISTRIBUIDO pero que no necesariamente requiere de un server.
 
 
-La razon por la cual humanos(animales etc) comunicandosen entre si no es un sistema distribuido en porque NO LOS PODEMOS MODIFICAR mediante programaci[on, un sietema distribuido si se puede 
+La razon por la cual humanos(animales etc) comunicandosen entre si no es un sistema distribuido en porque NO LOS PODEMOS MODIFICAR mediante programaci[on, un sistema distribuido si se puede 
 programar
 
 Definiciones de Otras fuentes: Ver video 

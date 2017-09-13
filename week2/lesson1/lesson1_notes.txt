@@ -25,3 +25,95 @@ Escalabilidad:
 
 
 IP multicast es implementado en routers y 
+
+
+
+UDP : User Datagram Protocol protocolo poco confiable para el env[io de mensajes , pero no es costoso en cuando a carga y menos sobrecargado.
+
+TCP : Transmision Control Protocol: Orientado a una manera mas confiable de env[io de mensajes
+
+
+
+1) Estructura CENTRALIZADA 
+
+Un sender, muchos receptores, problemas:
+
+S[i el unico sender falla en la mitad del env[io a todos en tonces queda esa mitad sin recibir el mensaje , peor a[un en donde falle al inicio.
+Que hayan muchos receptores, miles, millones, entonces el sender est[ara csobrecargado porque debe enviar demasiados mensajes.
+
+
+
+
+2) Estructura Tree Based, el arbol tendr[a nodos y hojas, mientras la complejidad en el punto 1 es O(N), en la del arbol es O(log(n)) 
+ los nodos que no son hojas pasaran a ser Senders y la carga se distribuye mejor por el aporte de los nuevos servers
+
+Desventaja:
+
+Se debe mantener el arbol, uy si se dania u nnodo que no es hoja , empezamos a tener que estudiar la manera de ser fault tolereants con esos nodos y saber como los vamos a reemplazar
+
+
+::::::::::::::::::::::::::::::TREE BASES MULTICAST PROTOCOLS
+
+Spanning tree: Para exparsir Multicast
+ACKs Acknowledments y NAKs Negative Acknowledments se usan para reparaci[on de MUlticast que no se recibieron 
+SRM (scalable relaiable Multicast) basados en NAKS
+RMTP (Reliable Multicast Transport Protocol) BASADOS EN ACKS
+
+pROBLEMA: Que quizas tengan muchos NAKS or ACKs para el caso de multicast donde la expasi[on inicial no se logr[o por algo 
+
+
+
+
+
+
+
+
+
+::::::::::::::::::::::::::::VIDEO 2::THE GOSSIP PROTOCOLS o EpidemiC Protocol::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+A pesar de basarse en UDP , Gossip en si es confiable
+
+Usa una periodicidad de env[io de mensajes epidemicos ejemplo que tengamos configirado x segundos
+
+Lo que hace es como infectar a los nodos que escoja aleatoriamente, en el min 2:08 tambien se puede ver una desventaja y es que un nodo puede ser "infectado" con mensajes mas de una vez  por que otro nodo le volvio a enviar el mensaje gossip
+
+Cuando un nodo es infectado , inmediatamente empieza su conteo para empezar a Infectar a los dem[as con los mensajes.
+
+
+PUSH vs PULL:
+
+
+ PUSH Gossip:
+Una vez se tenga MUlticast messages se inicia con la transmision (COMO EL EJEMPLO ARRIBA)
+> lA transmision puede ser con prioridades de mensajes, o enviando cada uno que le llega , o en grupo.
+
+
+PULL Gossip:
+Se envian mensajes todo el tiemp, y los mensajes pueden incluso ser quueries, para el caso en que no existan mensajes, los nodos receptores entonces van a estar preguntando si existen mensajes para ellos
+
+
+
+
+PUSH-PULL Gossip:
+
+
+
+::::::::::::::::::::::::::::VIDEO 3::GOSSIP analysis::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Propiedades 
+no se sobrecarga tando , incluso cuando alto volumen o grupos de mensaje
+Env[io de mensajes de manera r[apida
+Tolerante a fallos (high)
+
+
+
+
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+
+
+
